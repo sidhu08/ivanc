@@ -2,7 +2,7 @@
 
 This repository contains two applications: 
 
-1. A [React app](/web-client) that displays information about the author and his/her work as a software developer.
+1. A [React app](/web-client) that displays information about the author and the person who  work as a software developer.
 See deployed at http://ivanc.uk
 2. A [Django server app](/server) that assists the React app by providing data via a REST API.
 See deployed at https://api.ivanc.uk
@@ -10,18 +10,18 @@ See deployed at https://api.ivanc.uk
 ## React app
 
 Source code located under `/web-client`. This React app is set up with [Webpack](https://webpack.github.io/) and
-[Express](http://expressjs.com/) so that the React components are rendered in the server side. 
+[Express](http://expressjs.com/) so that the React components are being rendered in the server side. 
 
-#### Getting started
+#### Getting started 
 1. `npm install`: install app dependencies.
-3. Make sure the companion API app is running at`http://localhost:8000/`  
+3. Make sure that the companion API app is running at`http://localhost:8000/`  
 4. `npm start`: start the dev server at `http://localhost:3000/`
 5. Modify any of the components under [`/src`](web-client/src) and see the changes in real time thanks to
 [React Hot loader](https://github.com/gaearon/react-hot-loader)
 
 #### Deployment
 This app can be deployed as a Node application on Heroku or Dokku.
-There is a `heroku-postbuild` script in [`package.json`](web-client/package.json) so every time the app is pushed to Heroku,
+There is a `heroku-postbuild` script in [`package.json`](web-client/package.json). So every time the app is pushed to Heroku,
 Webpack compiles the JavaScript code in production mode. Webpack outputs the result into `public/bundle.js` that is loaded
 from [`index.html`](web-client/index.html). This `index.html` file is then served with Express when the root endpoint is
 requested. See [`server.js`](web-client/server.js) for more details. 
